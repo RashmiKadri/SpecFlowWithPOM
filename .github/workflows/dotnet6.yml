@@ -26,3 +26,5 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
+    - name: Publish Test Summary Results
+      run: npx github-actions-ctrf ctrf/ctrf-report.json
