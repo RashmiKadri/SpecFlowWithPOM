@@ -26,8 +26,9 @@ jobs:
       run: dotnet build --no-restore
     - name: Test
       run: dotnet test --no-build --verbosity normal
-    - uses: actions/cryptic-wizard/run-specflow-tests@v1.3.3
+    - uses: ./
       with:
         test-assembly-path: SpecFlowBDDAutomationFramework-main/bin/Release/net6.0
         test-assembly-dll: SpecFlowBDDAutomationFramework-main.dll
         output-html: MyTestResults.html
+ 
